@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sCODER - AI Developer & 11th Grade Student</title>
+    <meta name="description" content="Shaurya Gupta (sCODER) - AI Developer and 11th-grade student specializing in intelligent tools, web applications, and data visualization. Building the future with code.">
+    
+    <!-- Prevent theme flash -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const systemTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                const theme = savedTheme || 'dark'; // Default to dark theme
+                
+                if (document.documentElement) {
+                    document.documentElement.setAttribute('data-theme', theme);
+                }
+                
+                // Set theme on body when it's available
+                const setBodyTheme = () => {
+                    if (document.body) {
+                        document.body.setAttribute('data-theme', theme);
+                    } else {
+                        setTimeout(setBodyTheme, 10);
+                    }
+                };
+                setBodyTheme();
+            } catch (e) {
+                console.log('Theme initialization error:', e);
+            }
+        })();
+    </script>
+    <meta name="keywords" content="AI Developer, Machine Learning, Python, Flask, Web Development, Data Science, Shaurya Gupta">
+    <meta name="author" content="Shaurya Gupta">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="sCODER - AI Developer & 11th Grade Student">
+    <meta property="og:description" content="Shaurya Gupta (sCODER) - AI Developer and 11th-grade student specializing in intelligent tools, web applications, and data visualization. Building the future with code.">
+    <meta property="og:image" content="{{ url_for('static', filename='images/shaurya-profile.jpg', _external=True) }}">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="sCODER - AI Developer & 11th Grade Student">
+    <meta property="twitter:description" content="Shaurya Gupta (sCODER) - AI Developer and 11th-grade student specializing in intelligent tools, web applications, and data visualization. Building the future with code.">
+    <meta property="twitter:image" content="{{ url_for('static', filename='images/shaurya-profile.jpg', _external=True) }}">
+    <meta name="twitter:creator" content="@shaurya13797357">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <span class="brand-logo">sCODER</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn nav-link theme-toggle" id="themeToggle" aria-label="Toggle dark theme">
+                            <i data-feather="moon" class="theme-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Shaurya Gupta</h1>
+                        <h2 class="hero-subtitle">AI Developer & 11th-Grade Student</h2>
+                        <p class="hero-tagline" id="typewriter-text">Building intelligent tools, one dataset at a time.</p>
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary btn-lg me-3">See My Work</a>
+                            <a href="#contact" class="btn btn-outline-primary btn-lg">Let's Connect</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <div class="hero-image">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='images/shaurya-profile.jpg') }}" 
+                                 alt="Shaurya Gupta - AI Developer" 
+                                 class="profile-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding fade-in-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title">About Me</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="about-content">
+                        <h3 class="about-subtitle">My Story</h3>
+                        <p class="about-text">
+                            I wrote my first Python script at 13 – it was supposed to calculate my cricket batting average, but ended up crashing my computer! From that slightly embarrassing start, I've come a long way to building full-stack AI tools like location-based café finders and content management platforms.
+                        </p>
+                        <p class="about-text">
+                            Being in 11th grade means juggling school assignments with late-night coding sessions. Sometimes I get so absorbed in debugging that I forget about my physics homework (sorry, mom!). I'm drawn to projects that combine machine learning with practical web applications – there's something satisfying about making complex AI feel simple for users.
+                        </p>
+                        
+                        <h3 class="about-subtitle mt-4">Outside the Code</h3>
+                        <p class="about-text">
+                            Cricket is my first love – I play for my school team and dream of the perfect cover drive. In the kitchen, I'm still learning (my attempt at homemade pasta was... interesting). And yes, I do karaoke, though my friends might disagree with my song choices. These experiences teach me patience, creativity, and that failure is just another step toward getting it right.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i data-feather="code"></i>
+                            <span>Python & AI/ML</span>
+                        </div>
+                        <div class="skill-item">
+                            <i data-feather="globe"></i>
+                            <span>Full-Stack Web Dev</span>
+                        </div>
+                        <div class="skill-item">
+                            <i data-feather="database"></i>
+                            <span>Data Pipelines</span>
+                        </div>
+                        <div class="skill-item">
+                            <i data-feather="cloud"></i>
+                            <span>Cloud Deployment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-light fade-in-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title">Services</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-feather="cpu"></i>
+                        </div>
+                        <h3 class="service-title">AI Prototyping</h3>
+                        <ul class="service-list">
+                            <li>Web scraping & data pipelines</li>
+                            <li>Summarization with open-source LLMs (Groq API)</li>
+                            <li>Semantic search and document processing</li>
+                            <li>Automated research and data extraction</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i data-feather="monitor"></i>
+                        </div>
+                        <h3 class="service-title">Web Apps & Dashboards</h3>
+                        <ul class="service-list">
+                            <li>Flask/Django backends with PostgreSQL</li>
+                            <li>React frontends with modern UI/UX</li>
+                            <li>Deployment on Render, Azure, or similar platforms</li>
+                            <li>RESTful APIs and database design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding fade-in-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title">Projects</h2>
+                    <p class="section-subtitle">A showcase of my latest work and experiments</p>
+                </div>
+            </div>
+            
+            <!-- Project Filter Buttons -->
+            <div class="row mb-4">
+                <div class="col-lg-12 text-center">
+                    <div class="project-filters">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="ai-tools">AI Tools</button>
+                        <button class="filter-btn" data-filter="web-apps">Web Apps</button>
+                        <button class="filter-btn" data-filter="data-viz">Data Viz</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="project-card web-apps">
+                        <div class="project-header">
+                            <h3 class="project-title">Café Finder</h3>
+                            <a href="https://cafe-44or.onrender.com/" target="_blank" class="project-link">
+                                <i data-feather="external-link"></i>
+                            </a>
+                        </div>
+                        <p class="project-description">
+                            Location-based café search & reviews platform with interactive mapping and user-generated content.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Leaflet.js</span>
+                        </div>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Geolocation-based search</li>
+                                <li>Interactive maps with custom markers</li>
+                                <li>User reviews and ratings system</li>
+                                <li>Mobile-responsive design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="project-card web-apps">
+                        <div class="project-header">
+                            <h3 class="project-title">Blog Platform</h3>
+                            <a href="https://blog-hm8r.onrender.com/" target="_blank" class="project-link">
+                                <i data-feather="external-link"></i>
+                            </a>
+                        </div>
+                        <p class="project-description">
+                            Markdown-driven blog platform with advanced tagging system and interactive comments.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">SQLAlchemy</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">Markdown</span>
+                        </div>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Markdown content management</li>
+                                <li>Dynamic tagging and categorization</li>
+                                <li>Comment system with moderation</li>
+                                <li>SEO-optimized URLs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="project-card ai-tools">
+                        <div class="project-header">
+                            <h3 class="project-title">AI Research Assistant</h3>
+                            <div class="project-status">
+                                <span class="status-badge">In Development</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Automates scraping, chunking, summarizing, and semantic search for research workflows.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">BeautifulSoup</span>
+                            <span class="tech-tag">Groq API</span>
+                            <span class="tech-tag">ChromaDB</span>
+                            <span class="tech-tag">Streamlit</span>
+                        </div>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Automated web scraping pipelines</li>
+                                <li>LLM-powered summarization</li>
+                                <li>Vector database for semantic search</li>
+                                <li>Interactive Streamlit interface</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section-padding bg-light fade-in-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title">Achievements</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="achievements-grid">
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i data-feather="github"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Open Source Contributions</h4>
+                                <p>Active contributor on GitHub with multiple repositories</p>
+                                <a href="https://github.com/Shaurya5145" target="_blank" class="achievement-link">
+                                    View Profile <i data-feather="external-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i data-feather="award"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Certifications</h4>
+                                <p>DeepLearning.AI TensorFlow Developer</p>
+                                <p>Microsoft Learn Data Analyst</p>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i data-feather="star"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Competitions</h4>
+                                <p>J.P. Morgan CodeCatalyst Challenge Participant</p>
+                                <p>School AI Club Hackathon Finalist</p>
+                            </div>
+                        </div>
+                        
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i data-feather="users"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Community</h4>
+                                <p>Member of KLI AI Club</p>
+                                <p>Active in Dev Communities on GitHub</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding fade-in-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title">Contact</h2>
+                    <p class="section-subtitle">Let's build something great together.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- Flash Messages -->
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} alert-dismissible fade show" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                    
+                    <form class="contact-form" action="{{ url_for('contact') }}" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-12 text-center">
+                    <div class="social-links">
+                        <a href="https://github.com/Shaurya5145" target="_blank" class="social-link">
+                            <i data-feather="github"></i>
+                        </a>
+                        <a href="#" target="_blank" class="social-link">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="https://x.com/shaurya13797357" target="_blank" class="social-link">
+                            <i data-feather="twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>&copy; 2025 Shaurya Gupta. Built with passion and code.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+</body>
+</html>

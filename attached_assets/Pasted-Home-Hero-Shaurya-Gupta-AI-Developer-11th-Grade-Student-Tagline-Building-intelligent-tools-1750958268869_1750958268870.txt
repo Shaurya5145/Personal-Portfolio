@@ -1,0 +1,79 @@
+Home
+Hero
+– Shaurya Gupta – AI Developer & 11th-Grade Student
+– Tagline: “Building intelligent tools, one dataset at a time.”
+
+CTAs
+– “See My Work” → Projects
+– “Let’s Connect” → Contact
+
+About Me
+Story
+I wrote my first Python script at 13, and now I’m building full-stack AI tools like a café-finder and a tech blog platform.
+
+Outside the Code
+Cricket enthusiast, home cook in training, and occasional karaoke performer.
+
+Services
+AI Prototyping
+– Web scraping & data pipelines
+– Summarization with open-source LLMs (Groq API)
+
+Web Apps & Dashboards
+– Flask/Django back ends, React front ends
+– Deployment on Render, Azure, or similar
+
+Projects
+Showcase 3 case studies with visuals, tech stack, and outcomes.
+
+Café Finder
+– Live: https://cafe-44or.onrender.com/
+– What: Location-based café search & reviews
+– Tech: Flask, PostgreSQL, React, Leaflet.js
+
+Blog Platform
+– Live: https://blog-hm8r.onrender.com/post/1
+– What: Markdown-driven blog with tagging & comments
+– Tech: Flask, SQLAlchemy, Bootstrap
+
+AI Research Assistant
+– What: Automates scraping, chunking, summarizing, and semantic search
+– Tech: Python, BeautifulSoup, Groq API, ChromaDB, Streamlit
+
+Optional: Add filter tags: “AI Tools”, “Web Apps”, “Data Viz”
+
+Achievements
+GitHub: https://github.com/Shaurya5145
+
+Certifications: DeepLearning.AI TensorFlow Developer; Microsoft Learn Data Analyst
+
+Hackathons & Simulations: J.P. Morgan CodeCatalyst challenge; School AI Club Hackathon finalist
+
+Community: Member, KLI AI Club & Dev Communities on GitHub
+
+Design as a clean badge grid or horizontal timeline with crisp logos.
+
+Contact
+Form: Name, Email, Message
+
+Links: LinkedIn, GitHub, Twitter/X
+
+Closing Line: “Let’s build something great together.”
+
+Design Notes
+Theme: Light mode with strong contrast (white bg, charcoal text, cyan accents)
+
+Fonts: Inter for headlines, Roboto for body
+
+Animations:
+
+Smooth scroll
+
+Fade-in sections on view
+
+Navbar: Sticky with subtle backdrop blur
+
+Icons: Simple line icons (Heroicons/Lucide)
+
+—
+This spec is ready to go—just slot it into your React setup and it’ll feel polished, professional, and unmistakably yours.
